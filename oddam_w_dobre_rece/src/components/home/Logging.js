@@ -7,7 +7,7 @@ class Logging extends Component {
         return (
             <div className="row">
                 <div className="col-10">
-                <div className = "loggingButtons">
+                <div className = "loggingButtons col-5">
                     <button>
                         <Link to ="/logowanie" > Zaloguj </Link>
                     </button>
@@ -16,6 +16,7 @@ class Logging extends Component {
                     </button>
 
                 </div>
+                    <div className="col-1"></div>
             </div>
             </div>
         );

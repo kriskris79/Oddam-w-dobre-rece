@@ -26,7 +26,7 @@ button{   font-size: 13px;
 
 .navigation {
   width: 100vw;
-  //height: 12px;
+  height: 12px;
   margin-top: 1rem;
 
 
@@ -49,4 +49,91 @@ button{   font-size: 13px;
       }
 
   }}
+}
+
+// Header
+
+.headerImage {
+  background-image: url("../../assets/Home-Hero-Image.jpg");
+  background-size: cover;
+  background-position: -14rem 0;
+  height: 30rem;
+
+}
+
+.headerMain {
+  margin-top: 5rem;
+  .headerHeadline {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    margin-bottom: 1rem;
+  }
+  .decorationImage1 {
+    background-image: url("../../assets/Decoration.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 4rem;
+    // margin-left: 7rem;
+    width: 13rem;
+  }
+  .headerButtons {
+    padding-left: 2.5rem;
+    button {
+      background-color: white;
+      border: 1px solid black;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.3rem;
+      height: 5rem;
+      width: 10rem;
+      &:first-of-type {
+        margin-right: 2rem;
+      }
+      a {
+        color: $color-black;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// HomeThree columns
+
+.threeColumns {
+  background-color: $color-yellow;
+  margin: 0.2rem 0;
+
+  .columnInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    text-align: center;
+    h1 {
+      text-align: center;
+      color: #5E5322;
+      font-weight: 300;
+      font-size: 90px;
+      line-height: 122px;
+    }
+    h5 {
+      color: #3C3C3C;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+    p {
+      color: #3C3C3C;
+      font-size: 16px;
+      font-family: $font-alt;
+      font-weight: 300;
+      text-align: center;
+      width: 100%;
+    }
+  }
 }
