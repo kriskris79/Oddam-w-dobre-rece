@@ -6,6 +6,7 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import WhoWeHelp from "./WhoWeHelp";
+import Contact from "./Contact";
 // import Logging from "./Logging";
 // import Navigation from "./Navigation";
 
@@ -18,6 +19,7 @@ class Home extends Component {
                 <HomeFourSteps/>
                 <HomeAboutUs/>
                 <WhoWeHelp/>
+                <Contact/>
                 {/*<Logging/>*/}
                 {/*<Navigation/>*/}
 

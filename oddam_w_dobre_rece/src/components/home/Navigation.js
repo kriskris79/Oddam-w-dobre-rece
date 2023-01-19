@@ -1,6 +1,11 @@
 import React, {Component} from "react";
-
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
+
+const options = {
+    duration: 700,
+    activeClass: "active"
+};
 
 
 class Navigation extends Component {
@@ -17,24 +22,32 @@ class Navigation extends Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
-                                    <Link to="/" >O co chodzi?</Link>
-                                    </a>
+<a>
+                                        <ScrollLink to="fourSteps" {...options}>
+                                            O co chodzi?
+                                        </ScrollLink>
+</a>
                                 </li>
                                 <li>
                                     <a>
-                                    <Link to="/">O nas</Link>
+                                        <ScrollLink to="aboutUs" {...options}>
+                                            O nas
+                                        </ScrollLink>
                                         </a>
                                 </li>
                                 <li>
                                     <a>
-                                    <Link to="/">Fundacja i organizacja</Link>
+                                        <ScrollLink to="whoWeHelp" {...options}>
+                                            Fundacja i organizacje
+                                        </ScrollLink>
                                         </a>
                                 </li>
 
                                 <li>
                                     <a>
-                                    <Link to="/">Kontakt</Link>
+                                        <ScrollLink to="contact" {...options}>
+                                            Kontakt
+                                        </ScrollLink>
                                         </a>
                                 </li>
                             </ul>
