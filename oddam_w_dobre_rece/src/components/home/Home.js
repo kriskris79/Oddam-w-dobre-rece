@@ -11,7 +11,7 @@ import Footer from "./Footer";
 // import Logging from "./Logging";
 // import Login from "./Login";
 // import Navigation from "./Navigation";
-
+import Register from "./Register";
 class Home extends Component {
     render() {
         return (
@@ -23,6 +23,7 @@ class Home extends Component {
                 <WhoWeHelp/>
                 <Contact/>
                 <Footer/>
+                <Register/>
                 {/*<Login/>*/}
                 {/*<Logging/>*/}
                 {/*<Navigation/>*/}
