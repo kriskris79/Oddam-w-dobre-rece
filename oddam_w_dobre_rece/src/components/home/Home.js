@@ -7,7 +7,9 @@ import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import WhoWeHelp from "./WhoWeHelp";
 import Contact from "./Contact";
+import Footer from "./Footer";
 // import Logging from "./Logging";
+// import Login from "./Login";
 // import Navigation from "./Navigation";
 
 class Home extends Component {
@@ -20,6 +22,8 @@ class Home extends Component {
                 <HomeAboutUs/>
                 <WhoWeHelp/>
                 <Contact/>
+                <Footer/>
+                {/*<Login/>*/}
                 {/*<Logging/>*/}
                 {/*<Navigation/>*/}
 

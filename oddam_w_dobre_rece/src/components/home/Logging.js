@@ -9,10 +9,13 @@ class Logging extends Component {
                 <div className="col-10">
                 <div className = "loggingButtons col-5">
                     <button>
-                        <Link to ="/logowanie" > Zaloguj </Link>
+                        <li><Link className='link' to="/login">Zaloguj się</Link></li>
+
+                        {/*<Link to ="/logowanie" > Zaloguj </Link>*/}
                     </button>
                     <button>
-                        <Link to = "/rejestracja" > Zaloz konto</Link>
+                        {/*<Link to = "/rejestracja" > Zaloz konto</Link>*/}
+                        <li><Link className='link register' to="/register">Załóż konto</Link></li>
                     </button>
 
                 </div>
