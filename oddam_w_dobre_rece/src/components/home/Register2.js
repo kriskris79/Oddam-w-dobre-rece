@@ -57,12 +57,12 @@ const Register2 = ({ history}) => {
 
 
                 <label> Email
-                <input type="email" name="email"   placeholder="email"/>
-            </label>
+                    <input type="email" name="email"   placeholder="email"/>
+                </label>
                 <label>
-                Password
+                    Password
 
-                <input type="password" name="password" placeholder="Password"/>
+                    <input type="password" name="password" placeholder="Password"/>
                 </label>
 
                 <button type="submit" >Załóż konto</button>
