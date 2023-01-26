@@ -63,8 +63,8 @@ class Login extends Component {
                                 <p className={isPasswordProper ? 'hide' : ''}>Podane hasło jest za krótkie!</p>
                             </div>
                         </div>
-                        <button><Link to="/register" className='loginLink'>Załóż konto</Link></button>
-                        <button>Zaloguj się</button>
+                        <button><Link to="/register" className='register'>Załóż konto</Link></button>
+                        <button><Link to="/logging" className='logging'>Zaloguj sie</Link></button>
                     </form>
                 </div>
             </section>
