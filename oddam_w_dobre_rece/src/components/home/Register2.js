@@ -1,10 +1,13 @@
 // import React, {useState, useEffect, useCallback} from 'react';
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-// import app from "../../firebase";
+import app from "../../firebase";
 import decoration from "../../assets/Decoration.svg";
 import ReactDOM from "react-dom";
 import { useState } from "react";
 // import {Link} from "react-router-dom";
+import { createUserWithEmailAndPassword} from "firebase/auth";
+import { auth} from "../../firebase";
+import register from "./Register";
 
 //
 
@@ -16,8 +19,13 @@ function App () {
     const [loginPassword, setLoginPassword] = useState ("");
 
     const register = async () => {
-
-    }
+try {
+    const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword );
+    console.log(user)
+} catch (error) {
+    console.log(error.message);
+}
+    };
 
     const login = async  () => {
 
@@ -74,7 +82,7 @@ const Register2 = ({ history}) => {
 
             <h1>Załóż konto</h1>
             <img src={decoration}></img>
-            <form onSubmit={Register2}>
+            {/*<form onSubmit={Register2}>*/}
                 <h1>Register</h1>
 
 
@@ -91,7 +99,7 @@ const Register2 = ({ history}) => {
                     }} />/>
                 </label>
 
-                <button type="submit" >Załóż konto</button>
+                <button onClick={register} >Załóż konto</button>
 
 
 
@@ -114,7 +122,7 @@ const Register2 = ({ history}) => {
                 <h4> User log in </h4>
                     <button>Sign Out </button>
 
-            </form>
+            {/*</form>*/}
          </div>
 
     );
