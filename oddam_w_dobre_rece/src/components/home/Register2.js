@@ -2,40 +2,68 @@
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../../firebase";
 import decoration from "../../assets/Decoration.svg";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { useState } from "react";
 // import {Link} from "react-router-dom";
-import { createUserWithEmailAndPassword} from "firebase/auth";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+onAuthStateChanged,
+    signOut,
+
+} from "firebase/auth";
 import { auth} from "../../firebase";
-import register from "./Register";
+// import register from "./Register";
+// import login from "./Login";
+// import {currentPositionY} from "react-scroll/modules/__tests__/utility";
 
-//
 
-function App () {
+
+function Register2 () {
 
     const [registerEmail, setRegisterEmail] = useState ("");
     const [registerPassword, setRegisterPassword] = useState ("");
     const [loginEmail, setLoginEmail] = useState ("");
     const [loginPassword, setLoginPassword] = useState ("");
 
+    const [user , setUser] = useState({});
+
+    onAuthStateChanged(auth, (currentUser) => {
+setUser(currentUser);
+    });
+
+
     const register = async () => {
 try {
-    const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword );
-    console.log(user)
+    const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+    );
+    console.log(user);
 } catch (error) {
     console.log(error.message);
 }
     };
 
     const login = async  () => {
+        try {
+            const user = await signInWithEmailAndPassword(
+                auth,
+                loginEmail,
+                loginPassword
+            );
+            console.log(user);
+        } catch (error) {
+            console.log(error.message);
+        }
 
-
-    }
+    };
 
     const logout = async () => {
+await signOut(auth);
+    };
 
-    }
-}
 const Register2 = ({ history}) => {
 //     const handleRegister2 = useCallback(async event => {
 //         event.preventDefault();
@@ -81,7 +109,7 @@ const Register2 = ({ history}) => {
         <div>
 
             <h1>Załóż konto</h1>
-            <img src={decoration}></img>
+            {/*<img src={decoration}></img>*/}
             {/*<form onSubmit={Register2}>*/}
                 <h1>Register</h1>
 
@@ -89,14 +117,22 @@ const Register2 = ({ history}) => {
 
 
                 <label> Email
-                    <input type="email" name="email"   placeholder="email" onChenge={(event) => {setRegisterEmail(event.target.value);
-                    }} />
+                    <input
+                        placeholder="email"
+                        onChenge={(event) => {
+                            setRegisterEmail(event.target.value);
+                    }}
+                    />
                 </label>
                 <label>
                     Password
 
-                    <input type="password" name="password" placeholder="Password" onChenge={(event) => {setRegisterPassword(event.target.value);
-                    }} />/>
+                    <input
+                        placeholder="Password"
+                        onChenge={(event) => {
+                            setRegisterPassword(event.target.value);
+                    }}
+                    />
                 </label>
 
                 <button onClick={register} >Załóż konto</button>
@@ -115,12 +151,12 @@ const Register2 = ({ history}) => {
                     }} />/>
                 </label>
 
-                <button type="submit" >Log in </button>
-
-
+                <button onClick={login}> Log in </button>
 
                 <h4> User log in </h4>
-                    <button>Sign Out </button>
+            {user?.email}
+
+                    <button onClick={logout}> Sign Out </button>
 
             {/*</form>*/}
          </div>
