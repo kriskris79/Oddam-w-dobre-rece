@@ -1,7 +1,7 @@
 // import React, {useState, useEffect, useCallback} from 'react';
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import app from "../../firebase";
-import decoration from "../../assets/Decoration.svg";
+// import app from "../../firebase";
+// import decoration from "../../assets/Decoration.svg";
 // import ReactDOM from "react-dom";
 import { useState } from "react";
 // import {Link} from "react-router-dom";
@@ -64,7 +64,7 @@ try {
 await signOut(auth);
     };
 
-const Register2 = ({ history}) => {
+// const Register2 = ({ history}) => {
 //     const handleRegister2 = useCallback(async event => {
 //         event.preventDefault();
 //         const { email, password } = event.target.elements;
